@@ -26,7 +26,6 @@ AXM treats Data Contracts as first-class citizens — nothing enters or leaves y
 | Repository | Description |
 | :--- | :--- |
 | **[axm](https://github.com/axm-protocols/axm)** | Core framework — CLI, engine, and modular plugins. |
-| **[axm-docs](https://github.com/axm-protocols/axm-docs)** | Official documentation (MKDocs). |
 
 ---
 
@@ -36,7 +35,6 @@ AXM treats Data Contracts as first-class citizens — nothing enters or leaves y
 - **🛡️ Zero-Trust by Default** — Validate *every* input and output. Block bad data automatically.
 - **⚡ Blazing Fast** — Built on `uv`, Polars, and modern Python (3.12+).
 - **🔌 Modular Plugins** — Light core. Add `axm-tabular`, `axm-image`, or `axm-audit` only when needed.
-- **🤖 AI-Ready (MCP)** — Self-healing pipelines with Model Context Protocol integration.
 
 ---
 
@@ -53,8 +51,6 @@ axm init .
 # Run
 axm run pipelines/main.axm
 ```
-
-📖 **[Full Documentation →](https://axm-protocols.github.io/axm/)**
 
 ---
 
@@ -74,7 +70,7 @@ AXM is designed with the precision and robustness of Swiss watchmaking:
 AXM Protocols is an open-source initiative focused on bringing **Zero-Trust principles** to data engineering.
 
 - **License**: Apache 2.0
-- **Contact**: [axm-protocols@proton.me](mailto:axm-protocols@proton.me)
+- **Contact**: [contact@axm-protocols.io](mailto:contact@axm-protocols.io)
 
 ---
 
