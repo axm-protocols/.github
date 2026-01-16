@@ -5,69 +5,65 @@
 </p>
 
 <p align="center">
-  <strong>The Swiss Clock of Data Pipelines</strong><br>
-  <em>Zero-Trust Contracts. Data Governance at the Edge.</em>
+  <strong>"The Swiss Clock of Data Governance"</strong><br>
+  <em>Agentic Orchestration. Zero-Trust Contracts. Engineering Excellence.</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.12+-blue.svg" alt="Python" />
+  <img src="https://img.shields.io/badge/license-Apache%202.0-green.svg" alt="License" />
+  <img src="https://img.shields.io/badge/status-active-brightgreen.svg" alt="Status" />
 </p>
 
 ---
 
-## 🎯 Mission
+## Quick Links
 
-We're building the **industry standard for contract-first data orchestration**.
-
-AXM treats Data Contracts as first-class citizens — nothing enters or leaves your pipeline without validating against an immutable schema. No more YAML chaos. No more runtime surprises.
-
-> **"Schema in code, not in documentation."**
+- [axm Documentation](https://github.com/axm-protocols/axm)
+- [Contributing Guide](./CONTRIBUTING.md)
 
 ---
 
-## 🧩 The AXM Ecosystem
+## 🎯 Vision
 
-| Repository | Description |
-| :--- | :--- |
-| **[axm](https://github.com/axm-protocols/axm)** | Core framework — CLI, engine, and modular plugins. |
+AXM Protocols is the organizational hub for a **modular, precision-engineered ecosystem** of data governance tools.
 
----
-
-## ✨ Key Principles
-
-- **📜 Contracts, Not Config** — `.axm` files are signed truths, not loose YAML.
-- **🛡️ Zero-Trust by Default** — Validate *every* input and output. Block bad data automatically.
-- **⚡ Blazing Fast** — Built on `uv`, Polars, and modern Python (3.12+).
-- **🔌 Modular Plugins** — Light core. Add `axm-tabular`, `axm-image`, or `axm-audit` only when needed.
+We bridge the gap between deterministic engineering standards and agentic automation. Data Contracts are first-class citizens and engineering processes are orchestrated with surgical precision.
 
 ---
 
-## 🚀 Quick Start
+## 🧩 Core Principles
 
-```bash
-# Install
-pip install axm
-
-# Create project
-mkdir pipeline && cd pipeline
-axm init .
-
-# Run
-axm run pipelines/main.axm
-```
+- **🛡️ Zero-Trust Contracts** — Every interface is validated by schema. Immutable truths, not loose config.
+- **🤖 Agentic Orchestration** — Intelligence lives in workflows, not in code. Moving beyond static scripts.
+- **� Modular by Design** — A lightweight core with specialized "bras armés" (execution scripts) for every task.
+- **⚡ Peak Performance** — Built on modern Python (3.12+), `uv`, and high-efficiency data engines.
 
 ---
 
-## 📊 Philosophy
+## 🏗️ The AXM Ecosystem
 
-> **"The Swiss Clock of Data Pipelines"**
+| Package | Purpose | Status |
+|---------|---------|--------|
+| `axm` | CLI & Mechanics | 🟢 Public |
+| `axm-bmad` | Orchestration | 🔴 Private |
 
-AXM is designed with the precision and robustness of Swiss watchmaking:
-- **Deterministic** — Same inputs, same outputs, every time.
-- **Observable** — Built-in Trust Tax metrics to measure validation overhead.
-- **Self-Healing** — AI-powered error correction via MCP (coming 2026).
+---
+
+## � The Vision
+
+> **"Precision in Orchestration, Excellence in Execution."**
+
+AXM Protocols transforms how teams build and maintain complex software and data systems:
+- **Deterministic** — Repeatable patterns and predictable outcomes.
+- **Observable** — Deep insights into governance and quality metrics.
+- **Autonomous** — AI-ready infrastructure designed for the next generation of coding assistants.
 
 ---
 
 ## 🏢 About
 
-AXM Protocols is an open-source initiative focused on bringing **Zero-Trust principles** to data engineering.
+AXM Protocols is an initiative bringing **Swiss precision** to the world of software engineering automation.
 
 - **License**: Apache 2.0
 - **Contact**: [contact@axm-protocols.io](mailto:contact@axm-protocols.io)
@@ -75,5 +71,5 @@ AXM Protocols is an open-source initiative focused on bringing **Zero-Trust prin
 ---
 
 <p align="center">
-  <strong>Building the future of data governance.</strong>
+  <strong>Defining the future of engineering protocols.</strong>
 </p>
