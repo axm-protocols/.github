@@ -45,8 +45,9 @@ We bridge the gap between deterministic engineering standards and agentic automa
 
 | Package | Purpose | Status |
 |---------|---------|--------|
-| `axm` | CLI & Mechanics | 🟢 Public |
-| `axm-bmad` | Orchestration | 🔴 Private |
+| `axm` | CLI & Core Mechanics | 🟢 Public |
+
+*More specialized modules coming soon.*
 
 ---
 
