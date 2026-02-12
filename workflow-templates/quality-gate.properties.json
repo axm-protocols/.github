@@ -1,9 +1,0 @@
-{
-    "name": "AXM Quality Gate",
-    "description": "Standard quality gate workflow for AXM ecosystem repositories. Runs linting, type checking, and tests.",
-    "iconName": "octicon shield-check",
-    "categories": [
-        "Python",
-        "CI"
-    ]
-}
