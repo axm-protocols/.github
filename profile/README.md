@@ -1,12 +1,12 @@
 # AXM Protocols
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/axm-protocols/axm/main/assets/logo.png" alt="AXM Logo" width="200" />
+  <img src="https://raw.githubusercontent.com/axm-protocols/axm-init/main/assets/logo.svg" alt="AXM Logo" width="120" />
 </p>
 
 <p align="center">
-  <strong>"The Swiss Clock of Data Governance"</strong><br>
-  <em>Agentic Orchestration. Zero-Trust Contracts. Engineering Excellence.</em>
+  <strong>Open-source tools for Python engineering excellence.</strong><br>
+  <em>Scaffolding · Auditing · Bibliographic Research</em>
 </p>
 
 <p align="center">
@@ -17,60 +17,57 @@
 
 ---
 
-## Quick Links
+## Packages
 
-- [axm Documentation](https://github.com/axm-protocols/axm)
-- [Contributing Guide](./CONTRIBUTING.md)
-
----
-
-## 🎯 Vision
-
-AXM Protocols is the organizational hub for a **modular, precision-engineered ecosystem** of data governance tools.
-
-We bridge the gap between deterministic engineering standards and agentic automation. Data Contracts are first-class citizens and engineering processes are orchestrated with surgical precision.
+| Package | Description | Links |
+|---------|-------------|-------|
+| **[axm-init](https://github.com/axm-protocols/axm-init)** | Scaffold, audit & govern Python projects | [![CI](https://github.com/axm-protocols/axm-init/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-init/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-init)](https://pypi.org/project/axm-init/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-init/) |
+| **[axm-bib](https://github.com/axm-protocols/axm-bib)** | Search papers, resolve DOIs, download & extract PDFs | [![CI](https://github.com/axm-protocols/axm-bib/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-bib/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-bib)](https://pypi.org/project/axm-bib/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-bib/) |
 
 ---
 
-## 🧩 Core Principles
+## Quick Start
 
-- **🛡️ Zero-Trust Contracts** — Every interface is validated by schema. Immutable truths, not loose config.
-- **🤖 Agentic Orchestration** — Intelligence lives in workflows, not in code. Moving beyond static scripts.
-- **� Modular by Design** — A lightweight core with specialized "bras armés" (execution scripts) for every task.
-- **⚡ Peak Performance** — Built on modern Python (3.12+), `uv`, and high-efficiency data engines.
+```bash
+# Install
+uv add axm-init axm-bib
 
----
+# Scaffold a production-grade Python project
+axm-init init my-project --org my-org --author "Name" --email "e@e.com"
 
-## 🏗️ The AXM Ecosystem
+# Audit any project against the AXM gold standard (38 checks)
+axm-init audit
+# Score: 100/100 — Grade A 🏆
 
-| Package | Purpose | Status |
-|---------|---------|--------|
-| `axm` | CLI & Core Mechanics | 🟢 Public |
-
-*More specialized modules coming soon.*
-
----
-
-## � The Vision
-
-> **"Precision in Orchestration, Excellence in Execution."**
-
-AXM Protocols transforms how teams build and maintain complex software and data systems:
-- **Deterministic** — Repeatable patterns and predictable outcomes.
-- **Observable** — Deep insights into governance and quality metrics.
-- **Autonomous** — AI-ready infrastructure designed for the next generation of coding assistants.
+# Search papers and download PDFs
+axm-bib search "attention is all you need"
+axm-bib pdf 10.48550/arXiv.1706.03762
+```
 
 ---
 
-## 🏢 About
+## What We Build
 
-AXM Protocols is an initiative bringing **Swiss precision** to the world of software engineering automation.
+**axm-init** scaffolds Python projects with everything pre-configured — CI/CD, linting, typing, testing, docs, and an audit system that scores projects against 38 quality checks. Every scaffolded project starts at 100/100.
 
-- **License**: Apache 2.0
-- **Contact**: [contact@axm-protocols.io](mailto:contact@axm-protocols.io)
+**axm-bib** is a bibliographic toolkit: search papers across Semantic Scholar and CrossRef, resolve DOIs to BibTeX, and download PDFs with automatic content extraction to Markdown.
+
+Both tools are designed for **AI agent integration** — structured JSON output, MCP-compatible tools, and deterministic workflows that agents can orchestrate.
+
+---
+
+## Standards
+
+All AXM repositories follow a shared gold standard enforced by `axm-init audit`:
+
+- `src/` layout, PEP 621, `py.typed`
+- Ruff + MyPy (strict) + Pytest + Coverage
+- GitHub Actions CI with trusted OIDC publishing
+- MkDocs Material with Diátaxis documentation
+- Pre-commit hooks, Dependabot, conventional commits
 
 ---
 
 <p align="center">
-  <strong>Defining the future of engineering protocols.</strong>
+  <strong>Apache 2.0</strong> · <a href="https://github.com/axm-protocols">GitHub</a>
 </p>
