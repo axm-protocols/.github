@@ -1,7 +1,7 @@
 # AXM Protocols
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/axm-protocols/axm-init/main/assets/logo.svg" alt="AXM Logo" width="120" />
+  <img src="https://raw.githubusercontent.com/axm-protocols/axm-init/main/assets/logo.png" alt="AXM Logo" width="120" />
 </p>
 
 <p align="center">
