@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <strong>Open-source tools for Python engineering excellence.</strong><br>
-  <em>Scaffolding · Code Auditing · Bibliographic Research</em>
+  <strong>AXM — Agent eXecution Model</strong> <em>(pronounced "Axiom")</em><br>
+  Structured protocols for AI agents — from scaffolding to execution.
 </p>
 
 <p align="center">
@@ -17,49 +17,58 @@
 
 ---
 
-## Packages
+## Why Protocols?
 
-| Package | Description | Links |
-|---------|-------------|-------|
-| **[axm-init](https://github.com/axm-protocols/axm-init)** | Scaffold, check & govern Python projects | [![CI](https://github.com/axm-protocols/axm-init/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-init/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-init)](https://pypi.org/project/axm-init/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-init/) |
-| **[axm-audit](https://github.com/axm-protocols/axm-audit)** | Code quality auditing — 6-category scoring on 100pts | [![CI](https://github.com/axm-protocols/axm-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-audit/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-audit)](https://pypi.org/project/axm-audit/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-audit/) |
-| **[axm-bib](https://github.com/axm-protocols/axm-bib)** | Search papers, resolve DOIs, download & extract PDFs | [![CI](https://github.com/axm-protocols/axm-bib/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-bib/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-bib)](https://pypi.org/project/axm-bib/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-bib/) |
+AI agents are increasingly capable — but capability without governance is a liability. Today's agents produce great results, yet their work is hard to audit, reproduce, or certify. When the stakes are high — compliance, security, production code — you need more than "it usually works."
+
+AXM takes a protocol-driven approach: **structured pipelines with validation gates, checkpointed state, and traceable artifacts**. Think air traffic control — not restricting what agents can do, but ensuring accountability at every step.
+
+This philosophy shapes everything we build:
+
+- **Constrained execution** — agents follow structured pipelines, validation gates prevent skipping steps
+- **Two-stage validation** — fast structural checks first, semantic evaluation second
+- **Session persistence** — execution state is saved and resumable after any interruption
+- **Knowledge management** — URI-addressable, lazy-loaded resources for efficient context
+- **Provenance tracking** — every artifact carries traceability metadata
 
 ---
 
-## Quick Start
+## 🔧 Open-Source Tools
+
+Production-grade Python tools — designed for humans and AI agents alike. Each tool is independent, structured-output-first, and MCP-compatible.
+
+### Core Toolchain
+
+| Package | Description | Links |
+|---------|-------------|-------|
+| **[axm](https://github.com/axm-protocols/axm)** | Unified CLI shell — autodiscovers installed AXM packages via entry points | [![CI](https://github.com/axm-protocols/axm/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm)](https://pypi.org/project/axm/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm/) |
+| **[axm-init](https://github.com/axm-protocols/axm-init)** | Scaffold, check & govern Python projects — 38 quality checks | [![CI](https://github.com/axm-protocols/axm-init/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-init/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-init)](https://pypi.org/project/axm-init/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-init/) |
+| **[axm-audit](https://github.com/axm-protocols/axm-audit)** | Code quality auditing — 6-category composite scoring on 100pts | [![CI](https://github.com/axm-protocols/axm-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-audit/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-audit)](https://pypi.org/project/axm-audit/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-audit/) |
+| **[axm-bib](https://github.com/axm-protocols/axm-bib)** | Bibliographic toolkit — search papers, resolve DOIs, extract PDFs | [![CI](https://github.com/axm-protocols/axm-bib/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-bib/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-bib)](https://pypi.org/project/axm-bib/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-bib/) |
+
+### Coming Soon
+
+| Package | Description | Status |
+|---------|-------------|--------|
+| **axm-mcp** | MCP server — exposes all AXM tools to AI agents via Model Context Protocol | 🔜 |
+| **axm-ast** | Code intelligence — AST-powered search, impact analysis, and dependency graphs via tree-sitter | 🔜 |
+| **axm-git** | Git automation — preflight checks, atomic commits, semantic tagging | 🔜 |
 
 ```bash
-# Install
+# Install everything
+uv add axm[all]
+
+# Or pick what you need
 uv add axm-init axm-audit axm-bib
-
-# Scaffold a production-grade Python project
-axm-init init my-project --org my-org --author "Name" --email "e@e.com"
-
-# Check any project against the AXM gold standard (38 checks)
-axm-init check
-# Score: 100/100 — Grade A 🏆
-
-# Audit code quality across 6 dimensions (20 rules)
-axm-audit audit .
-# Score: 95/100 — Grade A 🏆
-
-# Search papers and download PDFs
-axm-bib search "attention is all you need"
-axm-bib pdf 10.48550/arXiv.1706.03762
 ```
 
 ---
 
-## What We Build
+## ⚙️ Protocol Engine
 
-**axm-init** scaffolds Python projects with everything pre-configured — CI/CD, linting, typing, testing, docs, and a check system that scores projects against 38 quality checks. Every scaffolded project starts at 100/100.
+Behind the open-source tools lies a **protocol execution engine** — the runtime that turns structured YAML protocols into validated, checkpointed agent workflows with server-enforced quality gates.
 
-**axm-audit** audits code quality across 6 weighted categories (linting, type safety, complexity, security, dependencies, testing) producing a composite 0–100 score. Features Ruff, mypy, radon, Bandit, pip-audit, deptry, and pytest-cov integration.
-
-**axm-bib** is a bibliographic toolkit: search papers across Semantic Scholar and CrossRef, resolve DOIs to BibTeX, and download PDFs with automatic content extraction to Markdown.
-
-All tools are designed for **AI agent integration** — structured JSON output, MCP-compatible tools, and deterministic workflows that agents can orchestrate.
+The engine is currently in private development. If you're interested in structured agent execution for your team, [reach out](mailto:gabriel@axm-protocols.io).
 
 ---
 
