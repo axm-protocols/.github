@@ -45,12 +45,12 @@ Production-grade Python tools designed for humans and AI agents alike. Each tool
 | **[axm-init](https://github.com/axm-protocols/axm-init)** | Scaffold, check & govern Python projects (38 quality checks) | [![CI](https://github.com/axm-protocols/axm-init/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-init/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-init)](https://pypi.org/project/axm-init/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-init/) |
 | **[axm-audit](https://github.com/axm-protocols/axm-audit)** | Code quality auditing, 6-category composite scoring on 100pts | [![CI](https://github.com/axm-protocols/axm-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-audit/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-audit)](https://pypi.org/project/axm-audit/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-audit/) |
 | **[axm-bib](https://github.com/axm-protocols/axm-bib)** | Bibliographic toolkit: search papers, resolve DOIs, extract PDFs | [![CI](https://github.com/axm-protocols/axm-bib/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-bib/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-bib)](https://pypi.org/project/axm-bib/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-bib/) |
+| **[axm-mcp](https://github.com/axm-protocols/axm-mcp)** | MCP server exposing all AXM tools to AI agents via Model Context Protocol | [![CI](https://github.com/axm-protocols/axm-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/axm-protocols/axm-mcp/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/axm-mcp)](https://pypi.org/project/axm-mcp/) [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://axm-protocols.github.io/axm-mcp/) |
 
 ### Coming Soon
 
 | Package | Description | Status |
 |---------|-------------|--------|
-| **axm-mcp** | MCP server exposing all AXM tools to AI agents via Model Context Protocol | 🔜 |
 | **axm-ast** | Code intelligence: AST-powered search, impact analysis, dependency graphs via tree-sitter | 🔜 |
 | **axm-git** | Git automation: preflight checks, atomic commits, semantic tagging | 🔜 |
 
