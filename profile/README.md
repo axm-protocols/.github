@@ -27,7 +27,7 @@ axm-protocols starts from a simple observation: in agent workflows, **not everyt
 
 ---
 
-## 🔧 axm-forge — Developer Tools
+## 🔧 [axm-forge](https://github.com/axm-protocols/axm-forge) — Developer Tools
 
 AST introspection, code auditing, project scaffolding, and git automation.
 
