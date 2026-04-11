@@ -37,6 +37,7 @@ AST introspection, code auditing, project scaffolding, and git automation.
 | [axm-audit](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-audit) | Code quality auditing — 6-category composite scoring on 100 pts | [![PyPI](https://img.shields.io/pypi/v/axm-audit)](https://pypi.org/project/axm-audit/) |
 | [axm-init](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-init) | Project scaffolding & 39-check governance gate | [![PyPI](https://img.shields.io/pypi/v/axm-init)](https://pypi.org/project/axm-init/) |
 | [axm-git](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-git) | Structured commits, semantic tagging, preflight checks | [![PyPI](https://img.shields.io/pypi/v/axm-git)](https://pypi.org/project/axm-git/) |
+| [axm-smelt](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-smelt) | Deterministic token compaction for LLM inputs | [![PyPI](https://img.shields.io/pypi/v/axm-smelt)](https://pypi.org/project/axm-smelt/) |
 
 <p>
   <a href="https://github.com/axm-protocols/axm-forge/actions/workflows/ci.yml"><img src="https://github.com/axm-protocols/axm-forge/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
@@ -44,7 +45,7 @@ AST introspection, code auditing, project scaffolding, and git automation.
 </p>
 
 ```bash
-uv add axm-ast axm-audit axm-init axm-git
+uv add axm-ast axm-audit axm-init axm-git axm-smelt
 ```
 
 ---
