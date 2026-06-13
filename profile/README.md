@@ -5,74 +5,71 @@
 </p>
 
 <p align="center">
-  <strong>A</strong>gent e<strong>X</strong>ecution <strong>M</strong>odel — deterministic tooling and structured <strong>Protocols</strong> for AI agents.
+  <strong>A</strong>gent e<strong>X</strong>ecution <strong>M</strong>odel — a deterministic shell for non-deterministic agents.
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/python-3.12+-blue.svg" alt="Python" />
   <img src="https://img.shields.io/badge/license-Apache%202.0-green.svg" alt="License" />
-  <img src="https://img.shields.io/badge/status-active-brightgreen.svg" alt="Status" />
   <a href="https://gabriel.axm-protocols.io"><img src="https://img.shields.io/badge/blog-gabriel.axm--protocols.io-8a5a2b.svg" alt="Blog" /></a>
 </p>
 
 ---
 
-## Philosophy
+## The idea
 
-Some problems resist determinism by nature — judging an open situation, writing prose,
-reasoning over the never-seen. Law met that long ago and did not try to make the judge
-deterministic: it accepted a fallible core and built a deterministic *shell* around it —
-procedure, rules of evidence, the duty to give reasons. **You do not make the judge
-reliable; you make the trial reliable.**
+Some problems resist determinism by nature — judging an open situation, writing
+prose, reasoning over the never-seen. Law met that long ago and didn't try to make
+the judge deterministic: it accepted a fallible core and built a deterministic
+*shell* around it — procedure, rules of evidence, the duty to give reasons. **You
+don't make the judge infallible; you make the trial reliable.**
 
-AXM applies the same move to AI agents. LLM generation is irreducibly probabilistic — so
-AXM does not fight that, it *frames* it. Code analysis, quality checks, and orchestration
-**can** be deterministic, and that is the shell: tight enough that the model's
-non-determinism stays confined, framed, justified, and revisable. Not a safer inference —
-a tighter procedure around an inference accepted as fallible.
+AXM applies the same move to AI agents. LLM generation is irreducibly probabilistic,
+so AXM doesn't fight it — it *frames* it. Analysis, quality gates, and orchestration
+**can** be deterministic, and that's the shell: tight enough that the model's
+non-determinism stays confined, framed, justified, and revisable.
 
-- **Structured output** — every tool returns JSON, designed for agents that consume data, not parse text
-- **AST-powered analysis** — tree-sitter based code intelligence for semantic precision, not grep noise
-- **Codified quality gates** — 40+ rules across lint, types, coverage, complexity, security, and governance
-- **Reproducible workflows** — conventional commits, pre-commit enforcement, semantic versioning
-
-> The thinking behind this — and where the analogy holds, and where it breaks —
-> is laid out in [the first post](https://gabriel.axm-protocols.io).
+> Where this idea comes from — and where it breaks — is in [the first post](https://gabriel.axm-protocols.io).
 
 ---
 
-## 🔧 [axm-forge](https://github.com/axm-protocols/axm-forge) — Developer Tools
+## What's here
 
-Unified CLI, MCP server, AST introspection, code auditing, project scaffolding, and git automation. Published on PyPI.
+**🔧 [axm-forge](https://github.com/axm-protocols/axm-forge) — the developer toolchain.**
+Nine packages on PyPI: a unified CLI, an MCP server, tree-sitter code intelligence,
+quality auditing, scaffolding, git automation, atomic editing, CST refactoring, and
+token compaction. Every tool returns a structured result with a compact text view —
+built for agents that consume data, not parse prose.
 
-| Package | Description | Version |
-|---|---|---|
-| [axm](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm) | Unified CLI shell with tool autodiscovery | [![PyPI](https://img.shields.io/pypi/v/axm)](https://pypi.org/project/axm/) |
-| [axm-mcp](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-mcp) | MCP server exposing all AXM tools to agents | [![PyPI](https://img.shields.io/pypi/v/axm-mcp)](https://pypi.org/project/axm-mcp/) |
-| [axm-ast](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-ast) | Code intelligence via tree-sitter — callers, impact, dependency graphs | [![PyPI](https://img.shields.io/pypi/v/axm-ast)](https://pypi.org/project/axm-ast/) |
-| [axm-audit](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-audit) | Code quality auditing — composite scoring across lint, types, tests, complexity, security | [![PyPI](https://img.shields.io/pypi/v/axm-audit)](https://pypi.org/project/axm-audit/) |
-| [axm-init](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-init) | Project scaffolding & governance gate | [![PyPI](https://img.shields.io/pypi/v/axm-init)](https://pypi.org/project/axm-init/) |
-| [axm-git](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-git) | Structured commits, semantic tagging, preflight checks | [![PyPI](https://img.shields.io/pypi/v/axm-git)](https://pypi.org/project/axm-git/) |
-| [axm-anvil](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-anvil) | CST-based code transforms and refactors | [![PyPI](https://img.shields.io/pypi/v/axm-anvil)](https://pypi.org/project/axm-anvil/) |
-| [axm-edit](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-edit) | Atomic multi-file batch editing | [![PyPI](https://img.shields.io/pypi/v/axm-edit)](https://pypi.org/project/axm-edit/) |
-| [axm-smelt](https://github.com/axm-protocols/axm-forge/tree/main/packages/axm-smelt) | Deterministic token compaction for LLM inputs | [![PyPI](https://img.shields.io/pypi/v/axm-smelt)](https://pypi.org/project/axm-smelt/) |
+```bash
+claude mcp add --scope user axm-mcp -- uvx --python 3.12 --from "axm-mcp[all]@latest" axm-mcp
+```
+
+`--scope user` installs it globally (available in every session). Drop it to enable AXM per-project instead — the server then loads only in the directory where you run the command.
+
+This wires `verify`, `audit`, the `ast_*` family, `git_commit`, `batch_edit` and the
+rest into your MCP client. Each package also ships standalone (`uv add axm-audit`).
 
 <p>
   <a href="https://github.com/axm-protocols/axm-forge/actions/workflows/ci.yml"><img src="https://github.com/axm-protocols/axm-forge/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://forge.axm-protocols.io"><img src="https://img.shields.io/badge/docs-live-brightgreen" alt="Docs"></a>
 </p>
 
-```bash
-uv add axm axm-mcp axm-ast axm-audit axm-init axm-git axm-anvil axm-edit axm-smelt
-```
-
 ---
 
-## ✍️ Writing
+## Coming next
 
-Notes on agentic AI and how it is built to work — the thinking behind AXM, in long form.
+The toolchain is the shell's *foundation*. The runtime is what comes next: turning
+agent work into something you can structure, gate, and replay.
 
-**[gabriel.axm-protocols.io](https://gabriel.axm-protocols.io)** — bilingual (FR/EN), built with Astro, deployed on Cloudflare Pages.
+- **Deterministic orchestration (loom-DAG).** Agent workflows as graphs — phases,
+  quality gates, and bounded repair loops — where the orchestration is structural
+  and observable, and the LLM is the oracle inside it, never the thing in charge.
+- **Ticket-driven execution.** A feature lifecycle from idea → spec → ticket → done,
+  each transition carried by a workflow rather than by discipline. The agent picks
+  up a ticket and runs it through the gates; nothing mediocre passes.
+
+The shell is what makes the autonomy safe. That's the whole bet.
 
 ---
 
@@ -80,8 +77,8 @@ Notes on agentic AI and how it is built to work — the thinking behind AXM, in 
 
 Every AXM package is measured on two axes:
 
-- **Governance** (`axm-init check`) — `src/` layout, PEP 621, `py.typed`, GitHub Actions CI, MkDocs docs, pre-commit hooks, conventional commits
-- **Code quality** (`axm-audit`) — Ruff lint, MyPy strict, test coverage, cyclomatic + cognitive complexity, security, dead code — composite score on 100 pts
+- **Governance** (`axm-init check`) — `src/` layout, PEP 621, `py.typed`, CI, MkDocs docs, pre-commit, conventional commits.
+- **Code quality** (`axm-audit`) — Ruff, MyPy strict, coverage, cyclomatic + cognitive complexity, security, dead code — composite score on 100 pts.
 
 ---
 
