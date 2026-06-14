@@ -77,7 +77,7 @@ The shell is what makes the autonomy safe. That's the whole bet.
 
 Every AXM package is measured on two axes:
 
-- **Governance** (`axm-init check`) — `src/` layout, PEP 621, `py.typed`, CI, MkDocs docs, pre-commit, conventional commits.
+- **Governance** (`axm-init check`) — `src/` layout, PEP 621, `py.typed`, CI, MkDocs docs, prek, conventional commits.
 - **Code quality** (`axm-audit`) — Ruff, MyPy strict, coverage, cyclomatic + cognitive complexity, security, dead code — composite score on 100 pts.
 
 ---
